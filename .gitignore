@@ -1,0 +1,6 @@
+# .ignore support plugin
+/.idea/
+/bower_components/
+/build/
+/node_modules/
+/exif-js.iml
