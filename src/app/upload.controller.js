@@ -12,7 +12,7 @@ angular.module('metadataApp')
                     });
             };
 
-            $scope.$on("fileProgress", function(e, progress) {
+            $scope.$on('fileProgress', function(e, progress) {
                 $scope.progress = progress.loaded / progress.total;
             });
         }

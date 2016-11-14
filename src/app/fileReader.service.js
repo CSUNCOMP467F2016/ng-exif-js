@@ -1,6 +1,6 @@
 angular
     .module('metadataApp')
-    .factory("fileReader", ["$q", "$log",
+    .factory('fileReader', ['$q', '$log',
         function ($q, $log) {
 
             var onLoad = function (reader, deferred, scope) {
@@ -21,7 +21,7 @@ angular
 
             var onProgress = function (reader, scope) {
                 return function (event) {
-                    scope.$broadcast("fileProgress",
+                    scope.$broadcast('fileProgress',
                         {
                             total: event.total,
                             loaded: event.loaded
