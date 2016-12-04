@@ -23,29 +23,20 @@ Some markers consist of just those two bytes; others are followed by two bytes i
 |Short name	|Bytes	|Payload	|Name and Comments|
 |-----------|-------|-----------|-----------------|
 |SOI	|0xFF, 0xD8	|None	|Start Of Image|
-|SOF0	|0xFF, 0xC0	|Variable size	|Start Of Frame (Baseline DCT)
-Indicates that this is a baseline DCT-based JPEG, and specifies the width, height, number of components, and component subsampling|
-|SOF2	|0xFF, 0xC2	|Variable size	|Start Of Frame (Progressive DCT)
-Indicates that this is a progressive DCT-based JPEG, and specifies the width, height, number of components, and component subsampling|
+|SOF0	|0xFF, 0xC0	|Variable size	|Start Of Frame (Baseline DCT) Indicates that this is a baseline DCT-based JPEG, and specifies the width, height, number of components, and component subsampling|
+|SOF2	|0xFF, 0xC2	|Variable size	|Start Of Frame (Progressive DCT) Indicates that this is a progressive DCT-based JPEG, and specifies the width, height, number of components, and component subsampling|
 |DHT	|0xFF, 0xC4	|Variable size	|Define Huffman Table(s)|
 |DQT	|0xFF, 0xDB	|Variable size	|Define Quantization Table(s)|
-|DRI	|0xFF, 0xDD	|2 bytes	|Define Restart Interval
-Specifies the interval between RSTn markers, in macroblocks. This marker is followed by two bytes indicating the fixed size so it can be treated like any other variable size segment.|
-|SOS	|0xFF, 0xDA	|Variable size	|Start Of Scan
-Begins a top-to-bottom scan of the image. In baseline DCT JPEG images, there is generally a single scan. Progressive DCT JPEG images usually contain multiple scans. This marker specifies which slice of data it will contain, and is immediately followed by entropy-coded data.|
-|RSTn	|0xFF, 0xDn
-n(n=0..7)	|None	|Restart
-Inserted every r macroblocks, where r is the restart interval set by a DRI marker. Not used if there was no DRI marker. The low 3 bits of the marker code cycle in value from 0 to 7.|
-|APPn	|0xFF, 0xEn	|Variable size	|Application-specific
-For example, an Exif JPEG file uses an APP1 marker to store metadata, laid out in a structure based closely on TIFF.|
+|DRI	|0xFF, 0xDD	|2 bytes	|Define Restart Interval Specifies the interval between RSTn markers, in macroblocks. This marker is followed by two bytes indicating the fixed size so it can be treated like any other variable size segment.|
+|SOS	|0xFF, 0xDA	|Variable size	|Start Of Scan Begins a top-to-bottom scan of the image. In baseline DCT JPEG images, there is generally a single scan. Progressive DCT JPEG images usually contain multiple scans. This marker specifies which slice of data it will contain, and is immediately followed by entropy-coded data.|
+|RSTn	|0xFF, 0xDn n(n=0..7)	|None	|Restart Inserted every r macroblocks, where r is the restart interval set by a DRI marker. Not used if there was no DRI marker. The low 3 bits of the marker code cycle in value from 0 to 7.|
+|APPn	|0xFF, 0xEn	|Variable size	|Application-specific For example, an Exif JPEG file uses an APP1 marker to store metadata, laid out in a structure based closely on TIFF.|
 |COM	|0xFF, 0xFE	|Variable size	|Comment|
 |EOI	|0xFF, 0xD9	|None	|End Of Image|
-
 
 The metadata in JPEG file is stored in APPn (0xFF, 0xEn) segment and the comment is stored in COM segment (0xFF, 0xFE). Several vendors might use the same APPn marker type to include their information, so these markers often begin with a vendor name (e.g., "Exif" or "Adobe") or some other identifying string.
 
 Exiv2 provides fast and easy read write access to the Exif, IPTC and XMP. Hence, this article only focuses on the position of Exif, IPTC and XMP data in JPEG files.
-
 
 ## EXIF ##
 Exif JPEG file uses an APP1 segment to store the information (and multiples APP2 segments for flashPix data). Exif APP1 segment stores a great amount of information on photographic parameters for digital cameras and it is the preferred way to store thumbnail images nowadays. It can also host an additional section with GPS data. All details about Exif are available at [[http://www.exif.org/Exif2-2.PDF]]
