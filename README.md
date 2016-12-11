@@ -49,9 +49,8 @@ Exif does not use APPn segments other than APP1, APP2 and COM segments. However,
 
 ## GUI / User Interface feature ##
  * Angular directive
- ** Show upload button
- ** Show progress bar button
- ** Show uploaded image
- ** Display EXIF information
- *** Exif/IPTC/GPS data shown on the right.
- *** Display Exif/IPTC features. Read,write
+  * Show upload button
+  * Show progress bar button
+  * Show uploaded image
+  * Display EXIF information
+   * Exif/IPTC/GPS data
