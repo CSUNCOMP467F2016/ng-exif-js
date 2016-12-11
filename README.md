@@ -50,6 +50,7 @@ Exif does not use APPn segments other than APP1, APP2 and COM segments. However,
 # Architecture #
 
 ## GUI / User Interface feature ##
+User interface features
  * Angular directive
   * Show upload button
   * Show progress bar button
@@ -59,7 +60,7 @@ Exif does not use APPn segments other than APP1, APP2 and COM segments. However,
 
 
 ## Tools ##
-Language / Frameworks
+Language and Frameworks used
  * Language
   * JavaScript
  * Framework
@@ -68,3 +69,11 @@ Language / Frameworks
  * Development tool
   * Browser-sync
   * Gulp
+
+
+## Architecture ##
+Top down structure.
+
+![picture alt](https://github.com/CSUNCOMP467F2016/ng-exif-js/blob/master/docs/architecture.png)
+
+
