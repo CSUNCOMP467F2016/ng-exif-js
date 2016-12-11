@@ -34,6 +34,9 @@ Some markers consist of just those two bytes; others are followed by two bytes i
 |COM	|0xFF, 0xFE	|Variable size	|Comment|
 |EOI	|0xFF, 0xD9	|None	|End Of Image|
 
+![picture alt](https://github.com/CSUNCOMP467F2016/ng-exif-js/blob/master/docs/metadata_structure.jpg)
+
+
 The metadata in JPEG file is stored in APPn (0xFF, 0xEn) segment and the comment is stored in COM segment (0xFF, 0xFE). Several vendors might use the same APPn marker type to include their information, so these markers often begin with a vendor name (e.g., "Exif" or "Adobe") or some other identifying string.
 
 Exiv2 provides fast and easy read write access to the Exif, IPTC and XMP. Hence, this article only focuses on the position of Exif, IPTC and XMP data in JPEG files.
