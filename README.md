@@ -91,7 +91,7 @@ Present a simple web interface to upload an image and read EXIF data of image.
 
 Setup web interface, server, and exif tool.
 
-Include:
+**Include:**
  * Angular directive
  * Image validation
  * Read EXIF
