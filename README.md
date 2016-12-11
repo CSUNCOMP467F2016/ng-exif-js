@@ -77,3 +77,59 @@ Top down structure.
 ![picture alt](https://github.com/CSUNCOMP467F2016/ng-exif-js/blob/master/docs/architecture.png)
 
 
+## Performance Requirements ##
+Reduce the number of watchers in Angular using Batarang. Watcher count over 2000 will slow the browser rendering.
+
+
+## Error Handling ##
+ * Use Angular log service and JavaScript try-catch block
+ * Display log error message to console
+
+
+## Scope of Proof of Concept ##
+Present a simple web interface to upload an image and read EXIF data of image.
+
+Setup web interface, server, and exif tool.
+
+Include:
+ * Angular directive
+ * Image validation
+ * Read EXIF
+ * Print EXIF data
+
+
+## Scope of MVP ##
+By end of semester the project shall include a write feature.
+
+**Include:**
+ * Angular directive
+ * Read EXIF
+ * Print EXIF
+ * Logging
+ * Info & Error handling
+
+
+## Use Case ##
+ * User visits web page
+  * Display upload image button
+  * Display users uploaded image
+ * User uploads image
+  * Display image
+  * Display Exif/IPTC data
+
+
+## Milestones ##
+
+|Week	|Description|
+|-------|-----------|
+|10/6	|Research|
+|10/13	|Architecture|
+|10/20	|Angular upload file directive|
+|10/27	|EXIF tags & read|
+|11/3	|Presentation|
+|11/10	|Angular directive|
+|11/17	|EXIF read|
+|11/24	|EXIF read|
+|12/1	|Complete EXIF read|
+|12/8	|Presentation|
+
