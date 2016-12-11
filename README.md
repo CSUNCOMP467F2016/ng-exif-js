@@ -47,6 +47,8 @@ Exif APP1 segment consists of the APP1 marker (0xFFE1), Exif identifier string (
 
 Exif does not use APPn segments other than APP1, APP2 and COM segments. However, some unknown APPn may still exist on the file structure and Exif readers should be designed to skip over them.
 
+# Architecture #
+
 ## GUI / User Interface feature ##
  * Angular directive
   * Show upload button
@@ -54,3 +56,15 @@ Exif does not use APPn segments other than APP1, APP2 and COM segments. However,
   * Show uploaded image
   * Display EXIF information
    * Exif/IPTC/GPS data
+
+
+## Tools ##
+Language / Frameworks
+ * Language
+  * JavaScript
+ * Framework
+  * Angular
+  * Node.js
+ * Development tool
+  * Browser-sync
+  * Gulp
