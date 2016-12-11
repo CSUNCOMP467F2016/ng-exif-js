@@ -46,3 +46,12 @@ In theory, Exif APP1 is recorded immediately after the SOI marker (the marker in
 Exif APP1 segment consists of the APP1 marker (0xFFE1), Exif identifier string (“Exif\0\0”), and the attribute information itself. The identifier string "Exif\0\0” is used to avoid a conflict with other applications using APP1 (e.g XMP).
 
 Exif does not use APPn segments other than APP1, APP2 and COM segments. However, some unknown APPn may still exist on the file structure and Exif readers should be designed to skip over them.
+
+## GUI / User Interface feature ##
+ * Angular directive
+ ** Show upload button
+ ** Show progress bar button
+ ** Show uploaded image
+ ** Display EXIF information
+ *** Exif/IPTC/GPS data shown on the right.
+ *** Display Exif/IPTC features. Read,write
